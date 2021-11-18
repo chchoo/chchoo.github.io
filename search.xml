@@ -706,6 +706,54 @@ export default &#123;
       </tags>
   </entry>
   <entry>
+    <title>vue生命周期</title>
+    <url>/2019/11/18/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</url>
+    <content><![CDATA[<h1 id="vue的生命周期以及钩子函数"><a href="#vue的生命周期以及钩子函数" class="headerlink" title="vue的生命周期以及钩子函数:"></a>vue的生命周期以及钩子函数:</h1><span id="more"></span>
+
+<h1 id="1-vue的生命周期"><a href="#1-vue的生命周期" class="headerlink" title="1-vue的生命周期:"></a>1-vue的生命周期:</h1><p><code>vue的生命周期从Vue实例, 创建到销毁的过程</code></p>
+<p>图解:</p>
+<p><img src="/2019/11/18/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg" alt="vue的生命周期"></p>
+<h1 id="2-钩子函数"><a href="#2-钩子函数" class="headerlink" title="2-钩子函数:"></a>2-钩子函数:</h1><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1,概念:"></a>1,概念:</h2><p><strong>Vue</strong> 框架内置函数，随着组件的生命周期阶段，自动执行</p>
+<p>作用: 特定的时间点，执行特定的操作</p>
+<h2 id="2-分类"><a href="#2-分类" class="headerlink" title="2,分类"></a>2,分类</h2><table>
+<thead>
+<tr>
+<th><strong>阶段</strong></th>
+<th><strong>方法名</strong></th>
+<th><strong>方法名</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>初始化</td>
+<td>beforeCreate</td>
+<td>created</td>
+</tr>
+<tr>
+<td><code>挂载</code></td>
+<td>beforeMount</td>
+<td>mounted</td>
+</tr>
+<tr>
+<td><code>更新</code></td>
+<td>beforeUpdate</td>
+<td>updated</td>
+</tr>
+<tr>
+<td>销毁</td>
+<td>beforeDestroy</td>
+<td>destroyed</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue组件使用</title>
     <url>/2019/11/17/vue%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="vue组件使用及通信"><a href="#vue组件使用及通信" class="headerlink" title="vue组件使用及通信"></a>vue组件使用及通信</h1><span id="more"></span>
@@ -914,6 +962,8 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <span class="token operator">&lt;</span>style<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3-总结:"></a>3-总结:</h2><h3 id="Vue组件如何进行传值的"><a href="#Vue组件如何进行传值的" class="headerlink" title="Vue组件如何进行传值的"></a>Vue组件如何进行传值的</h3><p>父向子 -&gt; props定义变量 -&gt; 父在使用组件用属性给props变量传值</p>
+<p>子向父 -&gt; $emit触发父的事件 -&gt; 父在使用组件用@自定义事件名=父的方法 (子把值带出来)</p>
 ]]></content>
       <categories>
         <category>vue</category>
