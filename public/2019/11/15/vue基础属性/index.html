@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="vue基础属性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue基础属性">
+<meta property="og:url" content="http://example.com/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/index.html">
+<meta property="og:site_name" content="陈文涛个人博客">
+<meta property="og:description" content="vue基础属性">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115152931976.png">
+<meta property="og:image" content="http://example.com/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115153036413.png">
+<meta property="og:image" content="http://example.com/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115153220820.png">
+<meta property="article:published_time" content="2019-11-15T03:35:50.000Z">
+<meta property="article:modified_time" content="2021-11-17T11:41:23.000Z">
+<meta property="article:author" content="陈文涛">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="vue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115152931976.png">
+
+
+<link rel="canonical" href="http://example.com/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/","path":"2019/11/15/vue基础属性/","title":"vue基础属性"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>vue基础属性 | 陈文涛个人博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">陈文涛个人博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">vue基础属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%99%9A%E6%8B%9FDOM"><span class="nav-number">1.1.</span> <span class="nav-text">1-虚拟DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-key%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">2-key的作用:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87"><span class="nav-number">1.2.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%97%A0key-%E5%B0%B1%E5%9C%B0%E6%9B%B4%E6%96%B0"><span class="nav-number">1.2.2.</span> <span class="nav-text">1,无key - 就地更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9C%89key-%E5%80%BC%E4%B8%BA%E7%B4%A2%E5%BC%95-%E5%B0%B1%E5%9C%B0%E6%9B%B4%E6%96%B0"><span class="nav-number">1.2.3.</span> <span class="nav-text">2,有key - 值为索引 - 就地更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%9C%89key-%E5%80%BC%E4%B8%BAid-%E6%80%A7%E8%83%BD%E6%9C%80%E9%AB%98"><span class="nav-number">1.2.4.</span> <span class="nav-text">3,有key - 值为id - 性能最高</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Vue%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7-computed"><span class="nav-number">1.3.</span> <span class="nav-text">3-Vue计算属性-computed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-vue%E7%9B%91%E5%90%AC%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">4-vue监听器:</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="陈文涛"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">陈文涛</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/chchoo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;chchoo" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2916429937@gmail.com" title="E-Mail → mailto:2916429937@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="陈文涛">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈文涛个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vue基础属性
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-11-15 11:35:50" itemprop="dateCreated datePublished" datetime="2019-11-15T11:35:50+08:00">2019-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="vue基础属性"><a href="#vue基础属性" class="headerlink" title="vue基础属性"></a>vue基础属性</h1><span id="more"></span>
+
+
+
+<h2 id="1-虚拟DOM"><a href="#1-虚拟DOM" class="headerlink" title="1-虚拟DOM"></a>1-虚拟DOM</h2><p>概念:</p>
+<p>.vue文件中的template里写的标签, 都是模板, 都要被vue处理成虚拟DOM对象, 在生成真实DOM片段, 才会渲染显示到真实DOM页面上</p>
+<ol>
+<li><p>内存中生成一样的虚拟DOM结构(==本质是个JS对象==)</p>
+<p>因为真实的DOM属性好几百个, 没办法快速的知道哪个属性改变了</p>
+<p>比如template里标签结构</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+    &lt;div id&#x3D;&quot;box&quot;&gt;
+        &lt;p class&#x3D;&quot;my_p&quot;&gt;123&lt;&#x2F;p&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>对应的虚拟DOM结构</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> dom <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    type<span class="token operator">:</span> <span class="token string">'div'</span><span class="token punctuation">,</span>
+    attributes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span>id<span class="token operator">:</span> <span class="token string">'box'</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        type<span class="token operator">:</span> <span class="token string">'p'</span><span class="token punctuation">,</span>
+        attributes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token keyword">class</span><span class="token operator">:</span> <span class="token string">'my_p'</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        text<span class="token operator">:</span> <span class="token string">'123'</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol>
+<li><p>以后vue数据更新</p>
+<ul>
+<li>生成新的虚拟DOM结构</li>
+<li>和旧的虚拟DOM结构对比</li>
+<li>找不不同, 只更新变化的部分(重绘/回流)到页面 - 也叫打补丁</li>
+</ul>
+</li>
+</ol>
+<p>==好处1: 提高了更新DOM的性能(不用把页面全删除重新渲染)==</p>
+<p>==好处2: 虚拟DOM只包含必要的属性(没有真实DOM上百个属性)==</p>
+</li>
+</ol>
+<h2 id="2-key的作用"><a href="#2-key的作用" class="headerlink" title="2-key的作用:"></a>2-key的作用:</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>无key, 就地更新</p>
+<p>有key为索引, 就地更新</p>
+<p>有key为id, 对比新旧DOM, 无则创建/删除</p>
+<h3 id="1-无key-就地更新"><a href="#1-无key-就地更新" class="headerlink" title="1,无key - 就地更新"></a>1,无key - 就地更新</h3><p>v-for不会移动DOM, 而是尝试复用, 就地更新，如果需要v-for移动DOM, 你需要用特殊 attribute <code>key</code> 来提供一个排序提示</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;ul id&#x3D;&quot;myUL&quot;&gt;
+    &lt;li v-for&#x3D;&quot;str in arr&quot;&gt;
+        &#123;&#123; str &#125;&#125; 
+        &lt;input type&#x3D;&quot;text&quot;&gt;
+    &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;button @click&#x3D;&quot;addFn&quot;&gt;下标为1的位置新增一个&lt;&#x2F;button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
+            arr<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"老大"</span><span class="token punctuation">,</span> <span class="token string">"新来的"</span><span class="token punctuation">,</span> <span class="token string">"老二"</span><span class="token punctuation">,</span> <span class="token string">"老三"</span><span class="token punctuation">]</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">addFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">'新来的'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>旧 - DOM结构  和  新 - DOM结构 对比过程</p>
+<p><img src="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115152931976.png" alt="image-20211115152931976"></p>
+<h3 id="2-有key-值为索引-就地更新"><a href="#2-有key-值为索引-就地更新" class="headerlink" title="2,有key - 值为索引 - 就地更新"></a>2,有key - 值为索引 - 就地更新</h3><ul>
+<li>还是就地更新</li>
+</ul>
+<p>因为新旧虚拟DOM对比, key存在就复用此标签更新内容, 如果不存在就直接建立一个新的</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;ul id&#x3D;&quot;myUL&quot;&gt;
+    &lt;li v-for&#x3D;&quot;(str, index) in arr&quot; :key&#x3D;&quot;index&quot;&gt;
+        &#123;&#123; str &#125;&#125; 
+        &lt;input type&#x3D;&quot;text&quot;&gt;
+    &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;button @click&#x3D;&quot;addFn&quot;&gt;下标为1的位置新增一个&lt;&#x2F;button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
+            arr<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"老大"</span><span class="token punctuation">,</span> <span class="token string">"新来的"</span><span class="token punctuation">,</span> <span class="token string">"老二"</span><span class="token punctuation">,</span> <span class="token string">"老三"</span><span class="token punctuation">]</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">addFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">'新来的'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>图解:</p>
+<p><img src="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115153036413.png" alt="image-20211115153036413"></p>
+<ol>
+<li><p>v-for先循环产生新的DOM结构, key是连续的, 和数据对应</p>
+</li>
+<li><p>然后比较新旧DOM结构, 找到区别, 打补丁到页面上</p>
+<p>最后补一个li, 然后从第二个往后, 都要更新内容</p>
+<p>==口诀: key的值有id用id, 没id用索引==</p>
+</li>
+</ol>
+<h3 id="3-有key-值为id-性能最高"><a href="#3-有key-值为id-性能最高" class="headerlink" title="3,有key - 值为id - 性能最高"></a>3,有key - 值为id - 性能最高</h3><p>key的值只能是唯一不重复的, 字符串或数值</p>
+<p>v-for不会移动DOM, 而是尝试复用, 就地更新，如果需要v-for移动DOM, 你需要用特殊 attribute <code>key</code> 来提供一个排序提示</p>
+<p>新DOM里数据的key存在, 去旧的虚拟DOM结构里找到key标记的标签, 复用标签</p>
+<p>新DOM里数据的key存在, 去旧的虚拟DOM结构里没有找到key标签的标签, 创建</p>
+<p>旧DOM结构的key, 在新的DOM结构里没有了, 则==移除key所在的标签==</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+      <span class="token operator">&lt;</span>li v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"obj in arr"</span> <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">"obj.id"</span><span class="token operator">></span>
+        <span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> obj<span class="token punctuation">.</span>name <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+        <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+    <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"btn"</span><span class="token operator">></span>下标<span class="token number">1</span>位置插入新来的<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
+      arr<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">&#123;</span>
+          name<span class="token operator">:</span> <span class="token string">'老大'</span><span class="token punctuation">,</span>
+          id<span class="token operator">:</span> <span class="token number">50</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#123;</span>
+          name<span class="token operator">:</span> <span class="token string">'老二'</span><span class="token punctuation">,</span>
+          id<span class="token operator">:</span> <span class="token number">31</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#123;</span>
+          name<span class="token operator">:</span> <span class="token string">'老三'</span><span class="token punctuation">,</span>
+          id<span class="token operator">:</span> <span class="token number">10</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">btn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+        id<span class="token operator">:</span> <span class="token number">19</span><span class="token punctuation">,</span> 
+        name<span class="token operator">:</span> <span class="token string">'新来的'</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>style<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>图解:<img src="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115153220820.png" alt="image-20211115153220820"></p>
+<p><code>总结: 不用key也不影响功能(就地更新), 添加key可以提高更新的性能</code></p>
+<h2 id="3-Vue计算属性-computed"><a href="#3-Vue计算属性-computed" class="headerlink" title="3-Vue计算属性-computed"></a>3-Vue计算属性-computed</h2><p>总结:<code>一个数据, 依赖另外一些数据计算而来的结果</code></p>
+<p>语法:</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">computed<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token string">"计算属性名"</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token string">"值"</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>案例:需求: 求2个数的和显示到页面上</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;&#123;&#123; num &#125;&#125;&lt;&#x2F;p&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+export default &#123;
+  data()&#123;
+    return &#123;
+      a: 10,
+      b: 20
+    &#125;
+  &#125;,
+  &#x2F;&#x2F; 计算属性:
+  &#x2F;&#x2F; 场景: 一个变量的值, 需要用另外变量计算而得来
+  &#x2F;*
+    语法:
+    computed: &#123;
+      计算属性名 () &#123;
+        return 值
+      &#125;
+    &#125;
+  *&#x2F;
+ &#x2F;&#x2F; 注意: 计算属性和data属性都是变量-不能重名
+ &#x2F;&#x2F; 注意2: 函数内变量变化, 会自动重新计算结果返回
+  computed: &#123;
+    num()&#123;
+      return this.a + this.b
+    &#125;
+  &#125;
+&#125;
+&lt;&#x2F;script&gt;
+
+&lt;style&gt;
+
+&lt;&#x2F;style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="4-vue监听器"><a href="#4-vue监听器" class="headerlink" title="4-vue监听器:"></a>4-vue监听器:</h2><p>==想要侦听一个属性变化, 可使用侦听属性watch==</p>
+<p>作用:<code>可以侦听data/computed属性值改变</code></p>
+<p>语法:</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">watch<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token string">"被侦听的属性名"</span> <span class="token punctuation">(</span>newVal<span class="token punctuation">,</span> oldVal<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>完整例子:</p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;input type&#x3D;&quot;text&quot; v-model&#x3D;&quot;name&quot;&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;template&gt;
+
+&lt;script&gt;
+export default &#123;
+  data()&#123;
+    return &#123;
+      name: &quot;&quot;
+    &#125;
+  &#125;,
+  &#x2F;&#x2F; 目标: 侦听到name值的改变
+  &#x2F;*
+  语法:
+    watch: &#123;
+      变量名 (newVal, oldVal)&#123;
+        &#x2F;&#x2F; 变量名对应值改变这里自动触发
+      &#125;
+    &#125;
+  *&#x2F;
+  watch: &#123;
+    &#x2F;&#x2F; newVal: 当前最新值
+    &#x2F;&#x2F; oldVal: 上一刻值
+    name(newVal, oldVal)&#123;
+      console.log(newVal, oldVal);
+    &#125;
+  &#125;
+&#125;
+&lt;&#x2F;script&gt;
+
+&lt;style&gt;
+
+&lt;&#x2F;style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="陈文涛 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+              <a href="/tags/vue/" rel="tag"># vue</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/11/11/vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" rel="prev" title="vue基础入门">
+                  <i class="fa fa-chevron-left"></i> vue基础入门
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/11/17/vue%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8/" rel="next" title="vue组件使用">
+                  vue组件使用 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陈文涛</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+
+
+
+
+
+</body>
+</html>
