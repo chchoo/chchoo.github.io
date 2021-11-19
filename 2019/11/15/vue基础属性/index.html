@@ -338,7 +338,7 @@
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>旧 - DOM结构  和  新 - DOM结构 对比过程</p>
-<p><img src="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115152931976.png" alt="image-20211115152931976"></p>
+<p><img src="/images/loading.png" data-original="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115152931976.png" alt="image-20211115152931976"></p>
 <h3 id="2-有key-值为索引-就地更新"><a href="#2-有key-值为索引-就地更新" class="headerlink" title="2,有key - 值为索引 - 就地更新"></a>2,有key - 值为索引 - 就地更新</h3><ul>
 <li>还是就地更新</li>
 </ul>
@@ -365,7 +365,7 @@
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>图解:</p>
-<p><img src="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115153036413.png" alt="image-20211115153036413"></p>
+<p><img src="/images/loading.png" data-original="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115153036413.png" alt="image-20211115153036413"></p>
 <ol>
 <li><p>v-for先循环产生新的DOM结构, key是连续的, 和数据对应</p>
 </li>
@@ -425,7 +425,7 @@
 <span class="token operator">&lt;</span>style<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>图解:<img src="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115153220820.png" alt="image-20211115153220820"></p>
+<p>图解:<img src="/images/loading.png" data-original="/2019/11/15/vue%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/image-20211115153220820.png" alt="image-20211115153220820"></p>
 <p><code>总结: 不用key也不影响功能(就地更新), 添加key可以提高更新的性能</code></p>
 <h2 id="3-Vue计算属性-computed"><a href="#3-Vue计算属性-computed" class="headerlink" title="3-Vue计算属性-computed"></a>3-Vue计算属性-computed</h2><p>总结:<code>一个数据, 依赖另外一些数据计算而来的结果</code></p>
 <p>语法:</p>
@@ -535,7 +535,7 @@ export default &#123;
   </button>
   <div class="post-reward">
       <div>
-        <img src="/images/wechatpay.png" alt="陈文涛 微信">
+        <img src="/images/loading.png" data-original="/images/wechatpay.png" alt="陈文涛 微信">
         <span>微信</span>
       </div>
 
@@ -608,5 +608,11 @@ export default &#123;
 
 
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
