@@ -110,6 +110,7 @@ deploy:
   repo: git@github.com:chchoo/chchoo.github.io.git
   branch: main
 
+# 备份设置
 backup:
   type: git
   theme: next
@@ -124,3 +125,9 @@ search:
   field: post
   content: true
   format: html
+
+# 图片懒加载
+lazyload:
+  enable: true
+  onlypost: false
+  loadingImg: /images/loading.png

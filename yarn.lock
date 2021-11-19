@@ -1384,6 +1384,13 @@
   dependencies:
     "sprintf-js" "^1.0.3"
 
+"hexo-lazyload-image@^1.0.10":
+  "integrity" "sha1-CKZ+ckWQNx70m3fIjqtR1dNn8y4="
+  "resolved" "https://registry.npmmirror.com/hexo-lazyload-image/download/hexo-lazyload-image-1.0.10.tgz"
+  "version" "1.0.10"
+  dependencies:
+    "uglify-js" "^3.0.27"
+
 "hexo-log@^0.2.0":
   "integrity" "sha1-0w/UXhoSqDyIAzWGZASF78XfWm8="
   "resolved" "https://registry.npmmirror.com/hexo-log/download/hexo-log-0.2.0.tgz"
@@ -3091,6 +3098,11 @@
   "version" "0.3.2"
   dependencies:
     "prelude-ls" "~1.1.2"
+
+"uglify-js@^3.0.27":
+  "integrity" "sha1-wPJd/qHo5TI+zPWWEL4ItgQ8Fc8="
+  "resolved" "https://registry.npmmirror.com/uglify-js/download/uglify-js-3.14.3.tgz?cache=0&sync_timestamp=1635828800026&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fuglify-js%2Fdownload%2Fuglify-js-3.14.3.tgz"
+  "version" "3.14.3"
 
 "uglify-js@~2.4":
   "integrity" "sha1-+tV1XB4Vd2WLsG/5q25UjJW+vW4="
